@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PraySched</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2 id="judul">PraySched</h2>
+    <p id="desc">Temukan jadwal sholat di kota Anda</p>
+
+    <!-- Form Pencarian & Dropdown Auto-suggest -->
+    <div class="search-container">
+        <form id="form-search" class="search-form" onsubmit="return false;">
+            <input type="text" id="input-search" class="search-input" placeholder="Ketik nama kota..." autocomplete="off">
+            <button type="submit" id="btn-search" class="btn-search" disabled>Cari</button>
+        </form>
+        <div id="suggestions" class="suggestions-list"></div>
+    </div>
+
+    <!-- Informasi Wilayah, Jam Digital, dan Tanggal -->
+    <div class="info-container">
+        <div class="lokasi" id="txt-lokasi">Mendeteksi lokasi...</div>
+        <div class="jam-digital" id="txt-jam">00:00:00</div>
+        <div class="tanggal" id="txt-tanggal">--:--</div>
+    </div>
+
+    <div class="loading" id="txt-loading">Sedang menyelaraskan koordinat dan mengambil data Kemenag...</div>
+
+    <!-- Container Utama Jadwal -->
+    <div class="jadwal-list" id="jadwal-container">
+        <div class="jadwal-item" data-waktu="imsak">
+            <div class="jadwal-info">
+                <span class="nama-sholat">Imsak</span>
+                <span class="status-sholat" id="status-imsak">--</span>
+            </div>
+            <div class="waktu-wrapper">
+                <span class="waktu-sholat" id="imsak">-</span>
+                <span class="sisa-waktu" id="countdown-imsak"></span>
+            </div>
+        </div>
+        <div class="jadwal-item" data-waktu="subuh">
+            <div class="jadwal-info">
+                <span class="nama-sholat">Subuh</span>
+                <span class="status-sholat" id="status-subuh">--</span>
+            </div>
+            <div class="waktu-wrapper">
+                <span class="waktu-sholat" id="subuh">-</span>
+                <span class="sisa-waktu" id="countdown-subuh"></span>
+            </div>
+        </div>
+        <div class="jadwal-item" data-waktu="dzuhur">
+            <div class="jadwal-info">
+                <span class="nama-sholat">Dzuhur</span>
+                <span class="status-sholat" id="status-dzuhur">--</span>
+            </div>
+            <div class="waktu-wrapper">
+                <span class="waktu-sholat" id="dzuhur">-</span>
+                <span class="sisa-waktu" id="countdown-dzuhur"></span>
+            </div>
+        </div>
+        <div class="jadwal-item" data-waktu="ashar">
+            <div class="jadwal-info">
+                <span class="nama-sholat">Ashar</span>
+                <span class="status-sholat" id="status-ashar">--</span>
+            </div>
+            <div class="waktu-wrapper">
+                <span class="waktu-sholat" id="ashar">-</span>
+                <span class="sisa-waktu" id="countdown-ashar"></span>
+            </div>
+        </div>
+        <div class="jadwal-item" data-waktu="maghrib">
+            <div class="jadwal-info">
+                <span class="nama-sholat">Maghrib</span>
+                <span class="status-sholat" id="status-maghrib">--</span>
+            </div>
+            <div class="waktu-wrapper">
+                <span class="waktu-sholat" id="maghrib">-</span>
+                <span class="sisa-waktu" id="countdown-maghrib"></span>
+            </div>
+        </div>
+        <div class="jadwal-item" data-waktu="isya">
+            <div class="jadwal-info">
+                <span class="nama-sholat">Isya</span>
+                <span class="status-sholat" id="status-isya">--</span>
+            </div>
+            <div class="waktu-wrapper">
+                <span class="waktu-sholat" id="isya">-</span>
+                <span class="sisa-waktu" id="countdown-isya"></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
