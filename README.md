@@ -1,6 +1,6 @@
 # PraySched: Jadwal Waktu Sholat di Kota Anda
 
-PraySched adalah website untuk menampilkan waktu Shoolat dan dapat memperkirakan waktu Sholat yang akan datang. 
+PraySched adalah website untuk menampilkan waktu Sholat dan dapat memperkirakan waktu Sholat yang akan datang. 
 
 ## Tech Stack: 
 
