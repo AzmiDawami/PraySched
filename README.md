@@ -4,7 +4,7 @@ PraySched adalah website untuk menampilkan waktu Sholat dan dapat memperkirakan 
 
 ## Cara Menggunakan
 
-Anda dapat menekan link yang ada **[di sini](https://azmidawami.github.io/PraySched/)**
+Anda dapat menekan link yang ada **[di sini](https://praysched.netlify.app/)**
 
 ## Tech Stack: 
 
