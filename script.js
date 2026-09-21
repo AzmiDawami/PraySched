@@ -4,8 +4,41 @@ const formSearch = document.getElementById('form-search');
 const suggestionsBox = document.getElementById('suggestions');
 const txtJam = document.getElementById('txt-jam');
 
+// Elemen Dark Mode
+const themeToggleBtn = document.getElementById('theme-toggle');
+const themeIcon = document.getElementById('theme-icon');
+
 let debounceTimer;
 let dataJadwalSholat = null; // Menyimpan data jadwal aktif
+
+// Function untuk memperbarui ikon Font Awesome
+function updateThemeIcon(isDark) {
+    if (isDark) {
+        themeIcon.className = 'fa-solid fa-sun';
+    } else {
+        themeIcon.className = 'fa-solid fa-moon';
+    }
+}
+
+// Cek simpanan tema saat halaman pertama kali dimuat
+const currentTheme = localStorage.getItem('theme');
+if (currentTheme === 'dark' || (!currentTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.body.classList.add('dark-mode');
+    updateThemeIcon(true);
+} else {
+    document.body.classList.remove('dark-mode');
+    updateThemeIcon(false);
+}
+
+// Event Listener Toggle Dark Mode
+themeToggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    
+    const isDark = document.body.classList.contains('dark-mode');
+    updateThemeIcon(isDark);
+    
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+});
 
 // Jalankan saat halaman dimuat
 window.addEventListener('DOMContentLoaded', () => {
